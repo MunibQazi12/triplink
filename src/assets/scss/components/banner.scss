@@ -1,0 +1,13 @@
+#MainBanner {
+    width: 100%;
+    position: relative;
+
+    .BannerImage {
+        width: 100%;
+
+        @include media-breakpoint(md) {
+            object-fit: cover;
+        }
+    }
+}
+

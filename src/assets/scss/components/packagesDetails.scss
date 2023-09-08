@@ -1,0 +1,432 @@
+#PackageDetails {
+    .SearchForm {
+        margin-top: 25px;
+        position: static;
+
+        &__Container {
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.20));
+        }
+    }
+
+    .MainBanner {
+        &__Container {
+            &__header {
+                border-top: 1px solid #D0CBC9;
+                margin-top: 30px;
+                padding-top: 82px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__info {
+                    display: flex;
+                    align-items: center;
+
+                    .circutText {
+                        color: #0042C6;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .days {
+                        color: #222;
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-left: 30px;
+                    }
+
+                    .CancellationText {
+                        color: #027A02;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-left: 30px;
+                    }
+                }
+
+                &__price {
+                    display: flex;
+                    align-items: center;
+
+                    .fromText {
+                        color: #222;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+
+                    .number {
+                        color: #0042C6;
+                        font-size: 40px;
+                        font-weight: 500;
+                    }
+
+                    .currency {
+                        color: #0042C6;
+                        font-size: 32px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .CustomImageList {
+                &__listItem {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+
+                    .mainImage {
+                        border-radius: 4px;
+
+
+                    }
+
+                    .ImageBitMap2 {
+                        position: relative;
+                        margin-top: 5px;
+
+                        .seeMoreBtn {
+                            position: absolute;
+                            border-radius: 8px;
+                            border: 1px solid #222;
+                            background: #FFF;
+                            color: #222;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: 700;
+                            top: 40%;
+                            left: 24%;
+                            width: 173px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .OverView {
+        &__Container {
+            margin-top: 35px;
+            display: flex;
+            justify-content: space-between;
+
+            &__LeftSide {
+                max-width: 751px;
+
+                &__TextParagraph {
+                    .title {
+                        color: #222;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .text {
+                        color: #222;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+
+                &__IncludeSection {
+                    margin-top: 43px;
+
+                    .title {
+                        color: #222;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .Included {
+                        &__list {
+
+                            .listItem {
+                                padding: 0%;
+                                margin-bottom: 10px;
+
+                                .text {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seeMoreBtn {
+                    color: #0042C6;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    padding: unset;
+
+                }
+
+                .Schedule {
+                    &__accordians {
+
+
+                        .pannel {
+                            box-shadow: none;
+                            padding: 0%;
+                            border-left: 1px dashed #D0CBC9;
+                            padding-left: 18px;
+                            margin: 0%;
+
+
+
+                            &__Summary {
+                                padding: 0%;
+                                position: relative;
+                                min-height: unset;
+
+
+                                .div {
+                                    display: block;
+                                    background-color: #0042C6;
+                                    height: 14px;
+                                    width: 14px;
+                                    position: absolute;
+                                    z-index: 99;
+                                    border-radius: 50%;
+                                    left: -25px;
+                                    top: 24px;
+                                }
+
+                                .text {
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &__Details {
+                                padding: 0%;
+
+                                .placeImage {
+                                    border-radius: 4px;
+                                    width: 100%;
+                                }
+
+                                .paragraph {
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    margin-top: 10px;
+                                }
+
+                                .AccomodationDetail {
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    margin-top: 14px;
+                                }
+
+                                .info {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-top: 12px;
+
+                                    &__flight {
+                                        display: flex;
+                                        align-items: center;
+
+                                        .text {
+                                            color: #222;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            margin-left: 6px;
+                                        }
+                                    }
+
+                                    &__Dinner {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-left: 22px;
+
+                                        .text {
+                                            color: #222;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            margin-left: 6px;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+                .AdditionalInfo {
+                    margin-top: 35px;
+
+                    &__title {
+                        color: #222;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    .list {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .listItem {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .CancellationPolicy {
+                    margin-top: 38px;
+
+                    &__title {
+                        color: #222;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+
+                    &__text {
+                        color: #222;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .chooseDetails {
+                background-color: #fff;
+                filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.10));
+                width: 385px;
+                height: 367px;
+                border-radius: 4px;
+
+                &__title {
+                    color: #222;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 500;
+                    margin-top: 20px;
+                }
+
+                &__dropdownContainer {
+                    border: 1px solid #D0CBC9;
+                    border-radius: 4px;
+                    margin: 20px 14px;
+
+                    .dropdownBtn {
+                        height: 60px;
+                        padding: 10px 20px;
+                        border-bottom: 1px solid #D0CBC9;
+                        position: relative;
+
+                        &__title {
+                            color: #222;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+
+                        &__btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            cursor: pointer;
+
+                            .text {
+                                color: #222;
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                        }
+
+                        .originDropdown,
+                        .travelerDropdown {
+                            position: absolute;
+                            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.30));
+                            background-color: #FFF;
+                            width: 100%;
+                            z-index: 99;
+                            border-radius: 4px;
+                            left: 0px;
+                            top: 58px;
+
+                            .text {
+                                padding: 15px 20px;
+                                border-bottom: 1px solid #DFDFDF;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: #F4F8FC;
+                                }
+                            }
+                        }
+
+                        .travelerDropdown {
+                            &__List {
+                                padding: 0%;
+
+                                .listItem {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    border-bottom: 1px solid #D0CBC9;
+                                    height: 51px;
+
+                                    &__text {
+                                        color: #222;
+                                        font-size: 16px;
+                                        font-weight: 300;
+                                    }
+
+                                    &__functions {
+                                        display: flex;
+                                        align-items: center;
+
+                                        &__text {
+                                            color: #222;
+                                            font-size: 16px;
+                                            font-weight: 300;
+                                            margin: 0 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .BookNowBtn {
+                    margin: 20px;
+                    background-color: #0042C6;
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 500;
+                    width: 350px;
+                    height: 50px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+    height: 0px !important;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+    margin: 0%;
+    padding-top: 20px;
+}
+
+.css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+    margin: unset;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 48px;
+}

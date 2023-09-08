@@ -1,0 +1,18 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+// Abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// Components
+@import "./components/appbar.scss";
+@import "./components/navbar.scss";
+@import "./components/banner.scss";
+@import "./components/destinations.scss";
+@import "./components/packages.scss";
+@import "./components/footer.scss";
+@import "./components/searchForm.scss";
+@import "./components/SearchResult.scss";
+@import "./components//mobileFilterModel.scss";
+@import "./components/packagesDetails.scss";
+// Pages
