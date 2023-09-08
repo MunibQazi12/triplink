@@ -46,11 +46,7 @@ const OverView = () => {
           </Box>
           <Box className="OverView__Container__LeftSide__IncludeSection">
             <Typography className="title">What’s included?</Typography>
-            <Box
-              flexDirection={"row"}
-              display={"flex"}
-              justifyContent={"space-between"}
-            >
+            <Box className="whatsInclude">
               <Box className="Included">
                 <List className="Included__list">
                   {IncludeList.map((data , index:number) => (
@@ -76,6 +72,7 @@ const OverView = () => {
           <Button className="seeMoreBtn">See More</Button>
 
           <Box className="Schedule">
+            <Typography className="title">Itinerary</Typography>
             <Accordions />
           </Box>
           <AdditionalInfo/>

@@ -23,6 +23,10 @@
                     display: flex;
                     align-items: center;
 
+                    @media (max-width : 640px) {
+                        flex-wrap: wrap;
+                    }
+
                     .circutText {
                         color: #0042C6;
                         font-size: 18px;
@@ -34,19 +38,24 @@
                         font-size: 18px;
                         font-weight: 300;
                         margin-left: 30px;
+                        margin-right: 30px;
+
                     }
 
                     .CancellationText {
                         color: #027A02;
                         font-size: 18px;
                         font-weight: 500;
-                        margin-left: 30px;
                     }
                 }
 
                 &__price {
                     display: flex;
                     align-items: center;
+
+                    @media (max-width : 640px) {
+                        display: none;
+                    }
 
                     .fromText {
                         color: #222;
@@ -69,35 +78,117 @@
             }
 
             .CustomImageList {
+
+                .image-gallery-slides {
+                    border-radius: 4px;
+                }
+
                 &__listItem {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     gap: 10px;
 
+                    @media (max-width : 920px) {
+                        flex-direction: column;
+
+                    }
+
+
+
                     .mainImage {
                         border-radius: 4px;
+                        width: 865px;
+                        height: 500px;
+                        position: relative;
 
+                        @media (max-width : 920px) {
+                            width: 100%;
+                            height: 400px;
+                            margin-top: 5px;
+                        }
 
+                        @media (max-width : 640px) {
+                            height: 245px;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .sideImages {
+                        @media (max-width : 920px) {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                        }
+
+                        @media (max-width : 640px) {
+                            flex-direction: column;
+
+                        }
+                    }
+
+                    .Bitmap1 {
+                        position: relative;
+                        width: 291px;
+                        height: 245px;
+
+                        @media (max-width : 920px) {
+                            width: 49%;
+                        }
+
+                        @media (max-width : 640px) {
+                            width: 100%;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                        }
                     }
 
                     .ImageBitMap2 {
                         position: relative;
-                        margin-top: 5px;
+                        margin-top: 8px;
+                        width: 291px;
+                        height: 245px;
 
-                        .seeMoreBtn {
+                        @media (max-width : 920px) {
+                            margin-top: 0px;
+                            width: 49%;
+                        }
+
+                        @media (max-width : 640px) {
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                        }
+
+                        .seeAllPhotos {
                             position: absolute;
-                            border-radius: 8px;
-                            border: 1px solid #222;
-                            background: #FFF;
-                            color: #222;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: 700;
-                            top: 40%;
-                            left: 24%;
-                            width: 173px;
-                            text-transform: capitalize;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+
+                            .btn {
+                                background: #FFF;
+                                width: 173px;
+                                border: 1px solid #222;
+                                text-transform: capitalize;
+                                border-radius: 8px;
+                                color: #222;
+                                text-align: center;
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
                         }
                     }
                 }
@@ -113,15 +204,31 @@
             margin-top: 35px;
             display: flex;
             justify-content: space-between;
+            gap: 15px;
+
+            @media (max-width : 1120px) {
+                flex-direction: column;
+                margin-top: 20px;
+            }
 
             &__LeftSide {
                 max-width: 751px;
+
+                @media (max-width : 1120px) {
+                    max-width: 100%;
+                    order: 2;
+
+                }
 
                 &__TextParagraph {
                     .title {
                         color: #222;
                         font-size: 22px;
                         font-weight: 500;
+
+                        @media (max-width : 768px) {
+                            font-size: 20px;
+                        }
                     }
 
                     .text {
@@ -134,10 +241,24 @@
                 &__IncludeSection {
                     margin-top: 43px;
 
+                    .whatsInclude {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+
+                        @media (max-width : 640px) {
+                            flex-direction: column;
+                        }
+                    }
+
                     .title {
                         color: #222;
                         font-size: 22px;
                         font-weight: 500;
+
+                        @media (max-width : 768px) {
+                            font-size: 20px;
+                        }
                     }
 
                     .Included {
@@ -146,11 +267,27 @@
                             .listItem {
                                 padding: 0%;
                                 margin-bottom: 10px;
+                                align-items: baseline;
 
                                 .text {
                                     margin-left: 10px;
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 300;
                                 }
                             }
+                        }
+
+                        @media (max-width : 640px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .NotIncluded {
+                        width: 50%;
+
+                        @media (max-width : 640px) {
+                            width: 100%;
                         }
                     }
                 }
@@ -165,9 +302,21 @@
                 }
 
                 .Schedule {
+                    .title {
+                        color: #222;
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                        margin-top: 38px;
+
+                        @media (max-width : 768px) {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            margin-top: 20px;
+                        }
+                    }
+
                     &__accordians {
-
-
                         .pannel {
                             box-shadow: none;
                             padding: 0%;
@@ -268,6 +417,10 @@
                         color: #222;
                         font-size: 22px;
                         font-weight: 500;
+
+                        @media (max-width : 640px) {
+                            font-size: 20px;
+                        }
                     }
 
                     .list {
@@ -276,6 +429,10 @@
 
                         .listItem {
                             width: 50%;
+
+                            @media (max-width : 640px) {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -287,6 +444,10 @@
                         color: #222;
                         font-size: 22px;
                         font-weight: 500;
+
+                        @media (max-width : 640px) {
+                            font-size: 20px;
+                        }
                     }
 
                     &__text {
@@ -303,6 +464,11 @@
                 width: 385px;
                 height: 367px;
                 border-radius: 4px;
+
+                @media (max-width : 1120px) {
+                    order: 1;
+                    width: 100%;
+                }
 
                 &__title {
                     color: #222;
@@ -327,6 +493,10 @@
                             color: #222;
                             font-size: 12px;
                             font-weight: 500;
+                        }
+
+                        .rmdp-container {
+                            width: 100%;
                         }
 
                         &__btn {
@@ -400,6 +570,7 @@
 
                 .BookNowBtn {
                     margin: 20px;
+
                     background-color: #0042C6;
                     color: #FFF;
                     text-align: center;
@@ -408,6 +579,12 @@
                     width: 350px;
                     height: 50px;
                     border-radius: 8px;
+
+                    @media (max-width : 1120px) {
+                        width: 97.5%;
+                        margin: 20px 14px;
+
+                    }
                 }
             }
         }
