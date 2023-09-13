@@ -4,14 +4,14 @@
         position: static;
 
         &__Container {
-            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.20));
+            filter: $color-boxShadow-2 ;
         }
     }
 
     .MainBanner {
         &__Container {
             &__header {
-                border-top: 1px solid #D0CBC9;
+                border-top: 1px solid $color-border-2;
                 margin-top: 30px;
                 padding-top: 82px;
 
@@ -23,18 +23,18 @@
                     display: flex;
                     align-items: center;
 
-                    @media (max-width : 640px) {
+                    @include media-breakpoint(sm) {
                         flex-wrap: wrap;
                     }
 
                     .circutText {
-                        color: #0042C6;
+                        color: $color-primary;
                         font-size: 18px;
                         font-weight: 500;
                     }
 
                     .days {
-                        color: #222;
+                        color: $color-black;
                         font-size: 18px;
                         font-weight: 300;
                         margin-left: 30px;
@@ -43,7 +43,7 @@
                     }
 
                     .CancellationText {
-                        color: #027A02;
+                        color: $color-green;
                         font-size: 18px;
                         font-weight: 500;
                     }
@@ -53,24 +53,24 @@
                     display: flex;
                     align-items: center;
 
-                    @media (max-width : 640px) {
+                    @include media-breakpoint(sm) {
                         display: none;
                     }
 
                     .fromText {
-                        color: #222;
+                        color: $color-black;
                         font-size: 18px;
                         font-weight: 300;
                     }
 
                     .number {
-                        color: #0042C6;
+                        color: $color-primary;
                         font-size: 40px;
                         font-weight: 500;
                     }
 
                     .currency {
-                        color: #0042C6;
+                        color: $color-primary;
                         font-size: 32px;
                         font-weight: 500;
                     }
@@ -78,7 +78,8 @@
             }
 
             .CustomImageList {
-
+                position: relative;
+                //z-index: -1;
                 .image-gallery-slides {
                     border-radius: 4px;
                 }
@@ -89,7 +90,7 @@
                     justify-content: space-between;
                     gap: 10px;
 
-                    @media (max-width : 920px) {
+                    @include media-breakpoint(md1) {
                         flex-direction: column;
 
                     }
@@ -102,13 +103,13 @@
                         height: 500px;
                         position: relative;
 
-                        @media (max-width : 920px) {
+                        @include media-breakpoint(md1) {
                             width: 100%;
                             height: 400px;
                             margin-top: 5px;
                         }
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             height: 245px;
                         }
 
@@ -118,13 +119,13 @@
                     }
 
                     .sideImages {
-                        @media (max-width : 920px) {
+                        @include media-breakpoint(md1) {
                             display: flex;
                             width: 100%;
                             justify-content: space-between;
                         }
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             flex-direction: column;
 
                         }
@@ -135,19 +136,21 @@
                         width: 291px;
                         height: 245px;
 
-                        @media (max-width : 920px) {
+                        @include media-breakpoint(md1) {
                             width: 49%;
                         }
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             width: 100%;
                         }
 
                         img {
                             border-radius: 4px;
                             width: 100%;
+                            height: 100%;
                         }
                     }
+
 
                     .ImageBitMap2 {
                         position: relative;
@@ -155,12 +158,14 @@
                         width: 291px;
                         height: 245px;
 
-                        @media (max-width : 920px) {
+
+
+                        @include media-breakpoint(md1) {
                             margin-top: 0px;
                             width: 49%;
                         }
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             width: 100%;
                             margin-top: 10px;
                         }
@@ -168,6 +173,7 @@
                         img {
                             border-radius: 4px;
                             width: 100%;
+                            height: 100%;
                         }
 
                         .seeAllPhotos {
@@ -179,12 +185,12 @@
                             height: 100%;
 
                             .btn {
-                                background: #FFF;
+                                background: $color-white;
                                 width: 173px;
-                                border: 1px solid #222;
+                                border: 1px solid $color-black;
                                 text-transform: capitalize;
                                 border-radius: 8px;
-                                color: #222;
+                                color: $color-black;
                                 text-align: center;
                                 font-size: 16px;
                                 font-weight: 700;
@@ -222,17 +228,17 @@
 
                 &__TextParagraph {
                     .title {
-                        color: #222;
+                        color: $color-black;
                         font-size: 22px;
                         font-weight: 500;
 
-                        @media (max-width : 768px) {
+                        @include media-breakpoint(md) {
                             font-size: 20px;
                         }
                     }
 
                     .text {
-                        color: #222;
+                        color: $color-black;
                         font-size: 16px;
                         font-weight: 300;
                     }
@@ -246,17 +252,17 @@
                         justify-content: center;
                         flex-direction: row;
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             flex-direction: column;
                         }
                     }
 
                     .title {
-                        color: #222;
+                        color: $color-black;
                         font-size: 22px;
                         font-weight: 500;
 
-                        @media (max-width : 768px) {
+                        @include media-breakpoint(md) {
                             font-size: 20px;
                         }
                     }
@@ -271,14 +277,18 @@
 
                                 .text {
                                     margin-left: 10px;
-                                    color: #222;
+                                    color: $color-black;
                                     font-size: 16px;
                                     font-weight: 300;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                         }
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             width: 100%;
                         }
                     }
@@ -286,14 +296,14 @@
                     .NotIncluded {
                         width: 50%;
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             width: 100%;
                         }
                     }
                 }
 
                 .seeMoreBtn {
-                    color: #0042C6;
+                    color: $color-primary;
                     font-size: 14px;
                     font-weight: 300;
                     text-transform: capitalize;
@@ -303,13 +313,13 @@
 
                 .Schedule {
                     .title {
-                        color: #222;
+                        color: $color-black;
                         font-size: 22px;
                         font-weight: 500;
                         margin-bottom: 20px;
                         margin-top: 38px;
 
-                        @media (max-width : 768px) {
+                        @include media-breakpoint(md) {
                             font-size: 20px;
                             margin-bottom: 10px;
                             margin-top: 20px;
@@ -320,7 +330,7 @@
                         .pannel {
                             box-shadow: none;
                             padding: 0%;
-                            border-left: 1px dashed #D0CBC9;
+                            border-left: 1px dashed $color-border-2;
                             padding-left: 18px;
                             margin: 0%;
 
@@ -334,7 +344,7 @@
 
                                 .div {
                                     display: block;
-                                    background-color: #0042C6;
+                                    background-color: $color-primary;
                                     height: 14px;
                                     width: 14px;
                                     position: absolute;
@@ -345,7 +355,7 @@
                                 }
 
                                 .text {
-                                    color: #222;
+                                    color: $color-black;
                                     font-size: 16px;
                                     font-weight: 500;
                                 }
@@ -357,20 +367,32 @@
                                 .placeImage {
                                     border-radius: 4px;
                                     width: 100%;
+
+                                    @include media-breakpoint(sm) {
+                                        height: 250px;
+                                    }
                                 }
 
                                 .paragraph {
-                                    color: #222;
+                                    color: $color-black;
                                     font-size: 16px;
                                     font-weight: 300;
                                     margin-top: 10px;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
                                 }
 
                                 .AccomodationDetail {
-                                    color: #222;
+                                    color: $color-black;
                                     font-size: 16px;
                                     font-weight: 300;
                                     margin-top: 14px;
+
+                                    @include media-breakpoint(sm) {
+                                        font-size: 14px;
+                                    }
                                 }
 
                                 .info {
@@ -383,10 +405,14 @@
                                         align-items: center;
 
                                         .text {
-                                            color: #222;
+                                            color: $color-black;
                                             font-size: 16px;
                                             font-weight: 500;
                                             margin-left: 6px;
+
+                                            @media (max-width : 640px) {
+                                                font-size: 14px;
+                                            }
                                         }
                                     }
 
@@ -396,7 +422,7 @@
                                         margin-left: 22px;
 
                                         .text {
-                                            color: #222;
+                                            color: $color-black;
                                             font-size: 16px;
                                             font-weight: 500;
                                             margin-left: 6px;
@@ -414,11 +440,11 @@
                     margin-top: 35px;
 
                     &__title {
-                        color: #222;
+                        color: $color-black;
                         font-size: 22px;
                         font-weight: 500;
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             font-size: 20px;
                         }
                     }
@@ -430,7 +456,7 @@
                         .listItem {
                             width: 50%;
 
-                            @media (max-width : 640px) {
+                            @include media-breakpoint(sm) {
                                 width: 100%;
                             }
                         }
@@ -441,17 +467,17 @@
                     margin-top: 38px;
 
                     &__title {
-                        color: #222;
+                        color: $color-black;
                         font-size: 22px;
                         font-weight: 500;
 
-                        @media (max-width : 640px) {
+                        @include media-breakpoint(sm) {
                             font-size: 20px;
                         }
                     }
 
                     &__text {
-                        color: #222;
+                        color: $color-black;
                         font-size: 16px;
                         font-weight: 300;
                     }
@@ -459,8 +485,8 @@
             }
 
             .chooseDetails {
-                background-color: #fff;
-                filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.10));
+                background-color: $color-white;
+                filter: $color-boxShadow-3;
                 width: 385px;
                 height: 367px;
                 border-radius: 4px;
@@ -471,7 +497,7 @@
                 }
 
                 &__title {
-                    color: #222;
+                    color: $color-black;
                     text-align: center;
                     font-size: 22px;
                     font-weight: 500;
@@ -479,18 +505,18 @@
                 }
 
                 &__dropdownContainer {
-                    border: 1px solid #D0CBC9;
+                    border: 1px solid $color-border-2;
                     border-radius: 4px;
                     margin: 20px 14px;
 
                     .dropdownBtn {
                         height: 60px;
                         padding: 10px 20px;
-                        border-bottom: 1px solid #D0CBC9;
+                        border-bottom: 1px solid $color-border-2;
                         position: relative;
 
                         &__title {
-                            color: #222;
+                            color: $color-black;
                             font-size: 12px;
                             font-weight: 500;
                         }
@@ -506,7 +532,7 @@
                             cursor: pointer;
 
                             .text {
-                                color: #222;
+                                color: $color-black;
                                 font-size: 16px;
                                 font-weight: 300;
                             }
@@ -516,7 +542,7 @@
                         .travelerDropdown {
                             position: absolute;
                             filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.30));
-                            background-color: #FFF;
+                            background-color: $color-white;
                             width: 100%;
                             z-index: 99;
                             border-radius: 4px;
@@ -525,11 +551,11 @@
 
                             .text {
                                 padding: 15px 20px;
-                                border-bottom: 1px solid #DFDFDF;
+                                border-bottom: 1px solid $color-border;
                                 cursor: pointer;
 
                                 &:hover {
-                                    background-color: #F4F8FC;
+                                    background-color: $color-hover ;
                                 }
                             }
                         }
@@ -542,11 +568,11 @@
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
-                                    border-bottom: 1px solid #D0CBC9;
+                                    border-bottom: 1px solid $color-border-2;
                                     height: 51px;
 
                                     &__text {
-                                        color: #222;
+                                        color: $color-black;
                                         font-size: 16px;
                                         font-weight: 300;
                                     }
@@ -556,7 +582,7 @@
                                         align-items: center;
 
                                         &__text {
-                                            color: #222;
+                                            color: $color-black;
                                             font-size: 16px;
                                             font-weight: 300;
                                             margin: 0 10px;
@@ -567,22 +593,22 @@
                         }
                     }
                 }
+                .bookNowContainer {
+                    margin: 10px 14px;
+                }
 
                 .BookNowBtn {
-                    margin: 20px;
-
-                    background-color: #0042C6;
-                    color: #FFF;
+                    background-color: $color-primary;
+                    color: $color-white;
                     text-align: center;
                     font-size: 18px;
                     font-weight: 500;
-                    width: 350px;
+                
                     height: 50px;
                     border-radius: 8px;
+                    width: 100%;
 
                     @media (max-width : 1120px) {
-                        width: 97.5%;
-                        margin: 20px 14px;
 
                     }
                 }
@@ -606,4 +632,32 @@
 
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
     min-height: 48px;
+}
+
+.fullscreen {
+    .image-gallery-slides {
+        height: 100%;
+        img {
+            height: auto;
+            width: auto;
+        }
+    }
+}
+
+.image-gallery-slides {
+    height: 500px;
+
+    @include media-breakpoint(sm) {
+        height: 300px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .image-gallery-center {
+        height: 100%;
+        width: 100%;
+    }
 }

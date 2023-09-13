@@ -1,12 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
-import Image from "next/image";
-import React, { useState } from "react";
-import DropdownIcon from "src/assets/images/packageDatial/chevron-up.png";
-import OriginDropdown from "./originDropdown";
-import TravelerDropdown from "./travelarDropdown";
+import OriginDropdown from "./origin";
+import TravelerDropdown from "./travelers";
 import DepartureDate from "./departureDate";
 
-const ChooseDetails = () => {
+const index = () => {
 
   return (
     <Box className="chooseDetails">
@@ -14,13 +11,15 @@ const ChooseDetails = () => {
         Choose your details
       </Typography>
       <Box className="chooseDetails__dropdownContainer">
-        <OriginDropdown/>
-         <TravelerDropdown/>
-        <DepartureDate/>
+        <OriginDropdown />
+        <TravelerDropdown />
+        <DepartureDate />
       </Box>
+      <Box className="bookNowContainer">
       <Button className="BookNowBtn">Book now</Button>
+      </Box>
     </Box>
   );
 };
 
-export default ChooseDetails;
+export default index;
