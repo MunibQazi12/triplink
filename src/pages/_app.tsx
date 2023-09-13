@@ -11,7 +11,6 @@ const MyApp = (props: any) => {
       <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
-
   );
 }
 

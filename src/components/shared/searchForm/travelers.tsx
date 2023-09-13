@@ -15,7 +15,7 @@ interface ISubOption {
   addHandler: () => void;
   removeHandler: () => void;
 }
-const SubOption = ({ label, count, addHandler, removeHandler }: ISubOption) => {
+export const SubOption = ({ label, count, addHandler, removeHandler }: ISubOption) => {
   return (
     <Box className="Travelers__Options" sx={{}}>
       <Typography className="Travelers__Options__Label">{label}</Typography>
